@@ -18,6 +18,8 @@ class StocksChickens extends Model
         'dispatch_AM',
         'dispatch_PM',
         'ending_stocks',
+        'ending_whole_chicken',
+        'total_marinated_chicken',
         'user_id',
     ];
 

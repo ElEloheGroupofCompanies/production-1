@@ -12,6 +12,7 @@ use App\Http\Controllers\PurchaseorderIngredientsController;
 use App\Http\Controllers\StocksChickensController;
 use App\Http\Controllers\StocksIngredientsController;
 use App\Http\Controllers\StocksTransferController;
+use App\Http\Controllers\DispatchFormController;
 use App\Http\Controllers\UserController;
 
 //Auth
@@ -71,6 +72,10 @@ Route::group (['middleware' => ['auth:sanctum']], function () {
     Route::get ('/stockstransfer/{stockstransfer_id}', [StocksTransferController::class, 'getStocksTransfer']);
     Route::post('/stockstransfer', [StocksTransferController::class, 'setStocksTransfer']);
 
+    //Dispatch Form
+    Route::get ('/dispatchforms', [DispatchFormController::class, 'getDispatchForms']);
+    Route::get ('/dispatchform/{dispatchform_id}', [DispatchFormController::class, 'getDispatchForm']);
+    Route::post('/dispatchform', [DispatchFormController::class, 'setDispatchForm']);
     //Profile
     Route::post('/updateprofile', [UserController::class, 'updateProfile']);
     Route::put ('/profile/{user_id}', [UserController::class, 'updateUser']);

@@ -31,6 +31,8 @@ class StocksChickensController extends Controller
             'dispatch_AM' => 'required|string',
             'dispatch_PM' => 'required|string',
             'ending_stocks' => 'required|string',
+            'ending_whole_chicken' => 'required|string',
+            'total_marinated_chicken' => 'nullable|string',
         ]);
 
         $stocksChicken = StocksChickens::create([
@@ -40,6 +42,8 @@ class StocksChickensController extends Controller
             'dispatch_AM' => $fields['dispatch_AM'],
             'dispatch_PM' => $fields['dispatch_PM'],
             'ending_stocks' => $fields['ending_stocks'],
+            'ending_whole_chicken' => $fields['ending_whole_chicken'],
+            'total_marinated_chicken' => $fields['total_marinated_chicken'],
             "user_id" => auth()->user()->id
         ]);
 
