@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('dispatch_AM');
             $table->string('dispatch_PM');
             $table->string('ending_stocks');
-            $table->string('ending_whole_chicken');
-            $table->string('total_marinated_chicken');
+            $table->string('ending_whole_chicken')->nullable();
+            $table->string('total_marinated_chicken')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();

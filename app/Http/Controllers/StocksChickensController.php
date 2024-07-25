@@ -31,7 +31,7 @@ class StocksChickensController extends Controller
             'dispatch_AM' => 'required|string',
             'dispatch_PM' => 'required|string',
             'ending_stocks' => 'required|string',
-            'ending_whole_chicken' => 'required|string',
+            'ending_whole_chicken' => 'nullable|string',
             'total_marinated_chicken' => 'nullable|string',
         ]);
 
