@@ -43,6 +43,7 @@ class DispatchFormResource extends JsonResource
             "free_paperbag" => $this->free_paperbag,
             "free_patok" => $this->free_patok,
             "free_vinegar1_5L" => $this->free_vinegar1_5L,
+            "others_amount" => $this->others_amount,
             "user" => $this->user
         ];
     }

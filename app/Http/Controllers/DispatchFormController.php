@@ -47,6 +47,7 @@ class DispatchFormController extends Controller
             'free_paperbag' => 'nullable|string',
             'free_patok' => 'nullable|string',
             'free_vinegar1_5L' => 'nullable|string',
+            'others_amount' => 'nullable|string',
         ]);
 
         $dispatchForm = DispatchForm::create([
@@ -77,6 +78,7 @@ class DispatchFormController extends Controller
             'free_paperbag' => $fields['free_paperbag'],
             'free_patok' => $fields['free_patok'],
             'free_vinegar1_5L' => $fields['free_vinegar1_5L'],
+            'others_amount' => $fields['others_amount'],
             "user_id" => auth()->user()->id
         ]);
 

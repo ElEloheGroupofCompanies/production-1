@@ -39,6 +39,7 @@ class DispatchForm extends Model
         "free_paperbag",
         "free_patok",
         "free_vinegar1_5L",
+        "others_amount",
         "user_id",
     ];
     public function user(): BelongsTo

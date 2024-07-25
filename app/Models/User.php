@@ -8,7 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Relations\HasMany;
-use App\Models\DipatchForm;
+use App\Models\DispatchForm;
 use App\Models\StocksChicken;
 use App\Models\PurchaseorderChicken;
 use App\Models\StocksIngredients;
@@ -105,8 +105,8 @@ class User extends Authenticatable
         return $this->hasMany(StocksTransfer::class);
     }
 
-    public function DipatchForm(): HasMany
+    public function DispatchForm(): HasMany
     {
-        return $this->hasMany(DipatchForm::class);
+        return $this->hasMany(DispatchForm::class);
     }
 }
