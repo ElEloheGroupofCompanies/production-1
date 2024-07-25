@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dispatch_form', function (Blueprint $table) {
+        Schema::create('dispatch_forms', function (Blueprint $table) {
             $table->id();
             $table->date('date_dispatched');
             $table->string('location');
@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('lumpia');
             $table->string('inasal');
             $table->string('lechon_manok');
-            $table->string('vinegar_1_5L');
+            $table->string('vinegar1_5L');
             $table->string('paper_bag_1');
             $table->string('paper_bag_2');
             $table->string('paper_bag_3');
@@ -28,12 +28,12 @@ return new class extends Migration
             $table->string('cellophane_10x14');
             $table->string('patok');
             $table->string('manila_paper');
-            $table->string('lpg_50kg');
-            $table->string('lpg_11kg');
+            $table->string('lpg_50kgs');
+            $table->string('lpg_11kgs');
             $table->string('oil_can');
             $table->string('oil_litres');
             $table->string('dishwashing1_5L');
-            $table->string('diswashing_1L');
+            $table->string('dishwashing_1L');
             $table->string('flour');
             $table->string('free_flour');
             $table->string('free_10x14');
@@ -51,6 +51,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dispatch_form');
+        Schema::dropIfExists('dispatch_forms');
     }
 };
