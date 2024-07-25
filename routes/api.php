@@ -76,6 +76,7 @@ Route::group (['middleware' => ['auth:sanctum']], function () {
     Route::get ('/dispatchforms', [DispatchFormController::class, 'getDispatchForms']);
     Route::get ('/dispatchform/{dispatchform_id}', [DispatchFormController::class, 'getDispatchForm']);
     Route::post('/dispatchform', [DispatchFormController::class, 'setDispatchForm']);
+    
     //Profile
     Route::post('/updateprofile', [UserController::class, 'updateProfile']);
     Route::put ('/profile/{user_id}', [UserController::class, 'updateUser']);

@@ -40,7 +40,7 @@ class DispatchFormController extends Controller
             'oil_can' => 'nullable|string',
             'oil_litres' => 'nullable|string',
             'dishwashing1_5L' => 'nullable|string',
-            'diswashing_1L' => 'nullable|string',
+            'dishwashing_1L' => 'nullable|string',
             'flour' => 'nullable|string',
             'free_flour' => 'nullable|string',
             'free_10x14' => 'nullable|string',
