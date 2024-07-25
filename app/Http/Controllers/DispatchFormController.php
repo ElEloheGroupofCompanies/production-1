@@ -20,7 +20,7 @@ class DispatchFormController extends Controller
 
     function setDispatchForm(Request $request) {
         $fields = $request->validate([
-            'date_dispatched' => 'required|string',
+            'date_dispatched' => 'required|date',
             'location' => 'required|string',
             'dispatch_AM' => 'required|string',
             'dispatch_PM' => 'nullable|string',
