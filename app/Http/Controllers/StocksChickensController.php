@@ -25,6 +25,7 @@ class StocksChickensController extends Controller
     
     function setStocksChicken(Request $request) {
         $fields = $request->validate([
+            'date_added' => 'required|date',
             'chicken_kilo_types' => 'required',
             'beginning_stocks' => 'required|string',
             'chops_made' => 'required|string',
@@ -36,6 +37,7 @@ class StocksChickensController extends Controller
         ]);
 
         $stocksChicken = StocksChickens::create([
+            'date_added' => $fields['date_added'],
             'chicken_kilo_types' => $fields['chicken_kilo_types'],
             'beginning_stocks' => $fields['beginning_stocks'],
             'chops_made' => $fields['chops_made'],

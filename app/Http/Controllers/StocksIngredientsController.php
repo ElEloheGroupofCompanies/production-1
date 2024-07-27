@@ -20,6 +20,7 @@ class StocksIngredientsController extends Controller
 
     function setStocksIngredient(Request $request) {
         $fields = $request->validate([
+            'date_added' => 'required|date',
             'ingredients_name' => 'required',
             'beginning_stocks' => 'required|string',
             'dispatch_AM' => 'required|string',
@@ -28,6 +29,7 @@ class StocksIngredientsController extends Controller
         ]);
 
         $stocksIngredient = StocksIngredients::create([
+            'date_added' => $fields['date_added'],
             'ingredients_name' => $fields['ingredients_name'],
             'beginning_stocks' => $fields['beginning_stocks'],
             'dispatch_AM' => $fields['dispatch_AM'],

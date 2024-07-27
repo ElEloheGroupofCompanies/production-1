@@ -16,6 +16,7 @@ class LeftoverIngredientsResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "date_added" => $this->date_added,
             "ingredient_name" => $this->ingredient_name,
             "quantity" => $this->quantity,
             "unit_price" => $this->unit_price,

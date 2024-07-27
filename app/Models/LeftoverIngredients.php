@@ -12,6 +12,7 @@ class LeftoverIngredients extends Model
     use HasFactory;
 
     protected $fillable = [
+        'date_added',
         'ingredient_name',
         'quantity',
         'unit_price',

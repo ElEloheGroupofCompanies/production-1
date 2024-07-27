@@ -12,6 +12,7 @@ class LeftoversProduce extends Model
     use HasFactory;
 
     protected $fillable = [
+        'date_added',
         'number_of_fried_chicken',
         'number_of_lumpia_produce',
         'dispatched_to',

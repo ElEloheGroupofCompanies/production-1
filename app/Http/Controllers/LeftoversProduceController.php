@@ -20,12 +20,14 @@ class LeftoversProduceController extends Controller
 
     function setLeftoversProduce(Request $request) {
         $fields = $request->validate([
+            "date_added" => "required|date",
             "number_of_fried_chicken" => "required|string",
             "number_of_lumpia_produce" => "required|string",
             "dispatched_to" => "required",
         ]);
 
         $leftoversProduce = LeftoversProduce::create([
+            "date_added" => $fields["date_added"],
             "number_of_fried_chicken" => $fields["number_of_fried_chicken"],
             "number_of_lumpia_produce" => $fields["number_of_lumpia_produce"],
             "dispatched_to" => $fields["dispatched_to"],

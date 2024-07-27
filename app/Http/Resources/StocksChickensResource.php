@@ -16,6 +16,7 @@ class StocksChickensResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "date_added" => $this->date_added,
             "chicken_kilo_types" => $this->chicken_kilo_types,
             "beginning_stocks" => $this->beginning_stocks,
             "chops_made" => $this->chops_made,

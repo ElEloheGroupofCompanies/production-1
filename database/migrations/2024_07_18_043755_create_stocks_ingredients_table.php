@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('stocks_ingredients', function (Blueprint $table) {
             $table->id();
+            $table->date('date_added');
             $table->string('ingredients_name');
             $table->string('beginning_stocks');
             $table->string('dispatch_AM');

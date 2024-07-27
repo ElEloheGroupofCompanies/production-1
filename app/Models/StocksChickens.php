@@ -12,6 +12,7 @@ class StocksChickens extends Model
     use HasFactory;
 
     protected $fillable = [
+        'date_added',
         'chicken_kilo_types',
         'beginning_stocks',
         'chops_made',

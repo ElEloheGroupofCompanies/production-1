@@ -21,6 +21,7 @@ class LeftoverIngredientsController extends Controller
 
     function setLeftoverIngredient(Request $request) {
         $fields = $request->validate([
+            "date_added" => "required|date",
             "ingredient_name" => "required|string",
             "quantity" => "required|string",
             "unit_price" => "required|string",
@@ -28,6 +29,7 @@ class LeftoverIngredientsController extends Controller
         ]);
 
         $leftoverIngredient = LeftoverIngredients::create([
+            "date_added" => $fields["date_added"],
             "ingredient_name" => $fields["ingredient_name"],
             "quantity" => $fields["quantity"],
             "unit_price" => $fields["unit_price"],

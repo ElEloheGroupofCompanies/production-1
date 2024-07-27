@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('leftover_ingredients', function (Blueprint $table) {
             $table->id();
+            $table->date('date_added');
             $table->string('ingredient_name');
             $table->string('quantity');
             $table->string('unit_price');

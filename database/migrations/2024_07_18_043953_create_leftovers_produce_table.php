@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('leftovers_produces', function (Blueprint $table) {
             $table->id();
+            $table->string('date_added');
             $table->string('number_of_fried_chicken');
             $table->string('number_of_lumpia_produce');
             $table->string('dispatched_to');

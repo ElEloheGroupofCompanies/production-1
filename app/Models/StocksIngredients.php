@@ -12,6 +12,7 @@ class StocksIngredients extends Model
     use HasFactory;
 
     protected $fillable = [
+        'date_added',
         'ingredients_name',
         'beginning_stocks',
         'dispatch_AM',

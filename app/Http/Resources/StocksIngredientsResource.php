@@ -16,6 +16,7 @@ class StocksIngredientsResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "date_added" => $this->date_added,
             "ingredients_name" => $this->ingredients_name,
             "beginning_stocks" => $this->beginning_stocks,
             "dispatch_AM" => $this->dispatch_AM,

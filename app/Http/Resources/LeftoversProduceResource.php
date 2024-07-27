@@ -16,6 +16,7 @@ class LeftoversProduceResource extends JsonResource
     {
         return [
             "id" => $this->id,
+            "date_added" => $this->date_added,
             "number_of_fried_chicken" => $this->number_of_fried_chicken,
             "number_of_lumpia_produce" => $this->number_of_lumpia_produce,
             "dispatched_to" => $this->dispatched_to,
