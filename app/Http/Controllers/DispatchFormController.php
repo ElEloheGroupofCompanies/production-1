@@ -9,7 +9,7 @@ use App\Http\Resources\DispatchFormResource;
 class DispatchFormController extends Controller
 {
     public function getDispatchForms() {
-        $dispatchForms = DispatchFormResource::collection(DispatchForm::all());
+        $dispatchForms = DispatchFormResource::collection(DispatchForm::all()->paginate(10));
         return response()->json($dispatchForms, 200, [], JSON_PRETTY_PRINT);
     }
 

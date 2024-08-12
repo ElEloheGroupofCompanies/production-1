@@ -9,7 +9,7 @@ use App\Http\Resources\PurchaseorderChickenResource;
 class PurchaseorderChickenController extends Controller
 {
     public function getPurchaseorderChickens() {
-        $purchaseorderChickens = PurchaseorderChickenResource::collection(PurchaseorderChicken::all());
+        $purchaseorderChickens = PurchaseorderChickenResource::collection(PurchaseorderChicken::all()->paginate(10));
         return response()->json($purchaseorderChickens, 200, [], JSON_PRETTY_PRINT);
     }
 

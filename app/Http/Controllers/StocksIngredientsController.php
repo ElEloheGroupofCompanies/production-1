@@ -9,7 +9,7 @@ use App\Http\Resources\StocksIngredientsResource;
 class StocksIngredientsController extends Controller
 {
     public function getStocksIngredients() {
-        $stocksIngredients = StocksIngredientsResource::collection(StocksIngredients::all());
+        $stocksIngredients = StocksIngredientsResource::collection(StocksIngredients::all()->paginate(10));
         return response()->json($stocksIngredients, 200, [], JSON_PRETTY_PRINT);
     }
 

@@ -14,7 +14,7 @@ class LeftoversProduceController extends Controller
     }
 
     public function getLeftoversProduces() {
-        $leftoversProduces = LeftoversProduceResource::collection(LeftoversProduce::all());
+        $leftoversProduces = LeftoversProduceResource::collection(LeftoversProduce::all()->paginate(10));
         return response()->json($leftoversProduces, 200, [], JSON_PRETTY_PRINT);
     }
 
