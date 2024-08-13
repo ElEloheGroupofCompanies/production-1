@@ -15,7 +15,7 @@ class LeftoverIngredientsController extends Controller
     }
 
     public function getLeftoverIngredients() {
-        $leftoverIngredients = LeftoverIngredientsResource::collection(LeftoverIngredients::all()->paginate(10));
+        $leftoverIngredients = LeftoverIngredientsResource::collection(LeftoverIngredients::all());
         return response()->json($leftoverIngredients, 200, [], JSON_PRETTY_PRINT);
     }
 

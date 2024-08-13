@@ -14,7 +14,7 @@ class LeftoversTurnoverController extends Controller
     }
 
     public function getLeftoversTurnovers() {
-        $leftoversTurnovers = LeftoversTurnoverResource::collection(LeftoversTurnover::all()->paginate(10));
+        $leftoversTurnovers = LeftoversTurnoverResource::collection(LeftoversTurnover::all());
         return response()->json($leftoversTurnovers, 200, [], JSON_PRETTY_PRINT);
     }
 
